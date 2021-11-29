@@ -8,6 +8,7 @@ Inspired by [w4lle/PullDownView](https://github.com/w4lle/PullDownView) - versio
 ## Feature
 This library provides pull down and pull up feature to one view over another view.
 
+<img src="screenshots/PullDownView.gif" width="256">
 
 ## Dependency
 1. For using pulldownview module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.

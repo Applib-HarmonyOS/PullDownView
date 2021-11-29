@@ -12,7 +12,8 @@
   "module": {
     "package": "com.w4lle.library",
     "deviceType": [
-      "phone"
+      "phone",
+      "tablet"
     ],
     "distro": {
       "deliveryWithInstall": true,

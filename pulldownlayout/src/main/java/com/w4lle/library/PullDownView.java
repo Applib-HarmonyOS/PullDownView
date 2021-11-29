@@ -187,7 +187,6 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         AnimatorValue valueAnimator = new AnimatorValue();
         valueAnimator.setDuration(300);
         valueAnimator.setCurveType(ohos.agp.animation.Animator.CurveType.ACCELERATE_DECELERATE);
-        valueAnimator.start();
         valueAnimator.setValueUpdateListener(new ValueUpdateListener() {
             @Override
             public void onUpdate(AnimatorValue animator, float value) {
@@ -196,6 +195,7 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
                 containerView.setLayoutConfig(layoutParams);
             }
         });
+        valueAnimator.start();
     }
 
     @Override

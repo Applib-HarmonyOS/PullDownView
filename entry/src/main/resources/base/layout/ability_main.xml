@@ -8,8 +8,8 @@
     ohos:alignment="center"
     ohos:orientation="vertical"
     custom:is_change_speed="true"
-    custom:pull_down_height="90"
-    custom:pull_up_height="90"
+    custom:pull_down_height="30vp"
+    custom:pull_up_height="30vp"
     >
 
     <DependentLayout
@@ -31,7 +31,7 @@
         </DirectionalLayout>
 
         <DirectionalLayout
-            ohos:height="1000vp"
+            ohos:height="1200vp"
             ohos:width="match_parent"
             ohos:background_element="#FFFFFFFF"
             ohos:orientation="vertical"
