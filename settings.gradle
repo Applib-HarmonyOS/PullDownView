@@ -1,1 +1,1 @@
-include ':app', 'pull-down-layout'
+include ':entry', ':pulldownlayout'
