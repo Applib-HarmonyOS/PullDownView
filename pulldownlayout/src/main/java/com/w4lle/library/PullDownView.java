@@ -233,7 +233,7 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
     }
 
     /**
-     * Pull change event callback
+     * Pull change event callback.
      */
     public interface OnPullChangeListerner {
 
