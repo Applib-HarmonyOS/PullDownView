@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.w4lle.pulldownview;
 
-import com.w4lle.pulldownview.slice.MainAbilitySlice;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
+import com.w4lle.pulldownview.slice.MainAbilitySlice;
 
 /**
  * Main ability that routes to the required slice.

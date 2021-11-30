@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.w4lle.pulldownview.slice;
 
-import com.w4lle.library.PullDownView;
-import com.w4lle.pulldownview.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.window.dialog.ToastDialog;
+import com.w4lle.library.PullDownView;
+import com.w4lle.pulldownview.ResourceTable;
 
 /**
  * Sample app to test the PullDownView library functionality.
@@ -30,8 +31,8 @@ public class MainAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
-        PullDownView mPullDownView = (PullDownView) findComponentById(ResourceTable.Id_pull_down_view);
-        mPullDownView.setOnPullChangeListerner(new PullDownView.OnPullChangeListerner() {
+        PullDownView pullDownView = (PullDownView) findComponentById(ResourceTable.Id_pull_down_view);
+        pullDownView.setOnPullChangeListerner(new PullDownView.OnPullChangeListerner() {
             @Override
             public void onPullDown() {
                 ToastDialog toastDialog = new ToastDialog(getContext());

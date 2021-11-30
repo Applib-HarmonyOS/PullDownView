@@ -1,28 +1,28 @@
 package com.w4lle.library;
 
-import ohos.agp.window.service.DisplayManager;
-import ohos.app.Context;
-import ohos.agp.components.ScrollView;
-import ohos.agp.window.service.DisplayAttributes;
-import ohos.agp.components.AttrSet;
-import ohos.agp.components.ComponentContainer;
 import ohos.agp.animation.AnimatorValue;
 import ohos.agp.animation.AnimatorValue.ValueUpdateListener;
-import ohos.agp.components.Component.LayoutRefreshedListener;
+import ohos.agp.components.AttrSet;
 import ohos.agp.components.Component;
 import ohos.agp.components.Component.DrawTask;
-import ohos.agp.render.Canvas;
-import ohos.agp.components.Component.TouchEventListener;
-import ohos.multimodalinput.event.TouchEvent;
+import ohos.agp.components.Component.LayoutRefreshedListener;
 import ohos.agp.components.Component.ScrolledListener;
+import ohos.agp.components.Component.TouchEventListener;
+import ohos.agp.components.ComponentContainer;
+import ohos.agp.components.ScrollView;
+import ohos.agp.render.Canvas;
+import ohos.agp.window.service.DisplayAttributes;
+import ohos.agp.window.service.DisplayManager;
+import ohos.app.Context;
+import ohos.multimodalinput.event.TouchEvent;
 import com.hmos.compact.utils.AttrUtils;
 
 /**
  * Created by w4lle on 15-9-9.
  * Copyright (c) 2015 Boohee, Inc. All rights reserved.
  */
-public class PullDownView extends ScrollView implements LayoutRefreshedListener, DrawTask, TouchEventListener, ScrolledListener {
-
+public class PullDownView extends ScrollView implements LayoutRefreshedListener, DrawTask,
+        TouchEventListener, ScrolledListener {
     private static final float DEFAULTPULLDOWNHEIGHT = 50;
 
     private static final float DEFAULTPULLUPHEIGHT = 50;
@@ -61,6 +61,12 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
 
     private float pullUpHeight;
 
+    /**
+     * PullDownView Constructor.
+     *
+     *  @param context - context for PullDownView constructor
+     *
+     */
     public PullDownView(Context context) {
         this(context, null);
         setLayoutRefreshedListener(this);
@@ -69,6 +75,13 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         setScrolledListener(this);
     }
 
+    /**
+     * PullDownView Constructor.
+     *
+     *  @param context - context for PullDownView constructor
+     *  @param attrs - attributes
+     *
+     */
     public PullDownView(Context context, AttrSet attrs) {
         this(context, attrs, "");
         setLayoutRefreshedListener(this);
@@ -77,7 +90,15 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         setScrolledListener(this);
     }
 
-    public PullDownView(Context context, AttrSet attrs, java.lang.String defStyleAttr) {
+    /**
+     * PullDownView Constructor.
+     *
+     *  @param context - context for RainyView constructor
+     *  @param attrs - attributes
+     *  @param defStyleAttr - defStyle attribute
+     *
+     */
+    public PullDownView(Context context, AttrSet attrs, String defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
         setLayoutRefreshedListener(this);
@@ -120,7 +141,7 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
 
     @Override
     public boolean onTouchEvent(Component component, TouchEvent ev) {
-        switch(ev.getAction()) {
+        switch (ev.getAction()) {
             case TouchEvent.PRIMARY_POINT_DOWN:
                 break;
             case TouchEvent.POINT_MOVE:
@@ -128,6 +149,8 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
                 break;
             case TouchEvent.PRIMARY_POINT_UP:
                 doPointUpAction();
+                break;
+            default:
                 break;
         }
         return true;
@@ -209,6 +232,9 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         this.onPullChangeListerner = onPullChangeListerner;
     }
 
+    /**
+     * Pull change event callback
+     */
     public interface OnPullChangeListerner {
 
         void onPullDown();
