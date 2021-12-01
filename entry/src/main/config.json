@@ -35,6 +35,7 @@
           }
         ],
         "orientation": "unspecified",
+        "visible": true,
         "name": "com.w4lle.pulldownview.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
