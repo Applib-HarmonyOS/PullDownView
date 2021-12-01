@@ -4,13 +4,11 @@ import ohos.agp.animation.AnimatorValue;
 import ohos.agp.animation.AnimatorValue.ValueUpdateListener;
 import ohos.agp.components.AttrSet;
 import ohos.agp.components.Component;
-import ohos.agp.components.Component.DrawTask;
 import ohos.agp.components.Component.LayoutRefreshedListener;
 import ohos.agp.components.Component.ScrolledListener;
 import ohos.agp.components.Component.TouchEventListener;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.ScrollView;
-import ohos.agp.render.Canvas;
 import ohos.agp.window.service.DisplayAttributes;
 import ohos.agp.window.service.DisplayManager;
 import ohos.app.Context;
@@ -21,7 +19,7 @@ import com.hmos.compact.utils.AttrUtils;
  * Created by w4lle on 15-9-9.
  * Copyright (c) 2015 Boohee, Inc. All rights reserved.
  */
-public class PullDownView extends ScrollView implements LayoutRefreshedListener, DrawTask,
+public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         TouchEventListener, ScrolledListener {
     private static final float DEFAULTPULLDOWNHEIGHT = 50;
 
@@ -70,7 +68,6 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
     public PullDownView(Context context) {
         this(context, null);
         setLayoutRefreshedListener(this);
-        addDrawTask(this);
         setTouchEventListener(this);
         setScrolledListener(this);
     }
@@ -85,7 +82,6 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
     public PullDownView(Context context, AttrSet attrs) {
         this(context, attrs, "");
         setLayoutRefreshedListener(this);
-        addDrawTask(this);
         setTouchEventListener(this);
         setScrolledListener(this);
     }
@@ -102,7 +98,6 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
         super(context, attrs, defStyleAttr);
         init(context, attrs);
         setLayoutRefreshedListener(this);
-        addDrawTask(this);
         setTouchEventListener(this);
         setScrolledListener(this);
     }
@@ -132,11 +127,6 @@ public class PullDownView extends ScrollView implements LayoutRefreshedListener,
             layoutParams = containerView.getLayoutConfig();
             oldTopMargin = layoutParams.getMarginTop();
         }
-    }
-
-    @Override
-    public void onDraw(Component component, Canvas canvas) {
-        // onDraw method
     }
 
     @Override
