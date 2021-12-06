@@ -26,6 +26,13 @@ This library provides pull down and pull up feature to one view over another vie
 		testImplementation 'junit:junit:4.13'
 	}
 ```
+3. For using pulldownview from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+``` groovy
+         dependencies {
+             implementation 'dev.applibgroup:pulldownview:1.0.0'  
+	         testCompile 'junit:junit:4.13'
+         }
+```
 
 ## Usage
 
