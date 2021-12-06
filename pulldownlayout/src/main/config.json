@@ -1,0 +1,24 @@
+{
+  "app": {
+    "bundleName": "com.w4lle.pulldownview",
+    "vendor": "w4lle",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "com.w4lle.library",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "pulldownlayout",
+      "moduleType": "har"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.w4lle.library.PullDownView
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:custom="http://schemas.huawei.com/res/custom"
+    ohos:id="$+id:pull_down_view"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical"
+    custom:is_change_speed="true"
+    custom:pull_down_height="30vp"
+    custom:pull_up_height="30vp"
+    >
+
+    <DependentLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+
+        <DirectionalLayout
+            ohos:id="$+id:imagecontainer"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:orientation="vertical">
+
+            <Image
+                ohos:background_element="$media:back"
+                ohos:height="match_parent"
+                ohos:width="match_parent"
+                ohos:scale_mode="center">
+            </Image>
+        </DirectionalLayout>
+
+        <DirectionalLayout
+            ohos:height="1200vp"
+            ohos:width="match_parent"
+            ohos:background_element="#FFFFFFFF"
+            ohos:orientation="vertical"
+            ohos:top_margin="200vp">
+
+            <Text
+                ohos:id="$+id:text1"
+                ohos:height="50vp"
+                ohos:width="match_parent"
+                ohos:text="Container1"
+                ohos:text_size="30vp"/>
+
+            <Text
+                ohos:id="$+id:text2"
+                ohos:height="50vp"
+                ohos:width="match_parent"
+                ohos:text="Container2"
+                ohos:text_size="30vp"/>
+
+            <Text
+                ohos:id="$+id:text3"
+                ohos:height="50vp"
+                ohos:width="match_parent"
+                ohos:text="Container3"
+                ohos:text_size="30vp"/>
+
+            <Text
+                ohos:id="$+id:text4"
+                ohos:height="50vp"
+                ohos:width="match_parent"
+                ohos:text="Container1"
+                ohos:text_size="30vp"/>
+
+            <Text
+                ohos:id="$+id:text5"
+                ohos:height="50vp"
+                ohos:width="match_parent"
+                ohos:text="Container1"
+                ohos:text_size="30vp"/>
+
+        </DirectionalLayout>
+
+
+    </DependentLayout>
+
+</com.w4lle.library.PullDownView>
