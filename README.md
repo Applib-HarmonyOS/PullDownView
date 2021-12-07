@@ -1,3 +1,5 @@
+[![.github/workflows/main.yml](https://github.com/applibgroup/PullDownView/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/PullDownView/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_PullDownView&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=applibgroup_PullDownView)
 # PullDownView
 
 A HMOS library which provides pull down and pull up feature to one view over another view
