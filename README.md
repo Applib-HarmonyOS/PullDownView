@@ -1,3 +1,5 @@
+[![.github/workflows/main.yml](https://github.com/applibgroup/PullDownView/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/PullDownView/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_PullDownView&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=applibgroup_PullDownView)
 # PullDownView
 
 A HMOS library which provides pull down and pull up feature to one view over another view
@@ -25,6 +27,13 @@ This library provides pull down and pull up feature to one view over another vie
 		implementation fileTree(dir: 'libs', include: ['*.har'])
 		testImplementation 'junit:junit:4.13'
 	}
+```
+3. For using pulldownview from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+``` groovy
+         dependencies {
+             implementation 'dev.applibgroup:pulldownview:1.0.0'  
+	         testCompile 'junit:junit:4.13'
+         }
 ```
 
 ## Usage
